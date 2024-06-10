@@ -1,35 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Yo.</title>
-        <link rel="stylesheet" href="styles.css">
-    </head>
-    <body>
-        <video autoplay muted loop id="background-video">
-            <source src="freestyle.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-        <div class="center-text">
-            <p style="font-size:48px; margin: 0; font-family: serif;">Aaron Zawislak</p>
-            <p style="font-size:16px; margin: 0;">professional dilly daller</p>
-            <button id="mute-button">Mute</button>
-            <div class="social-buttons">
-                <a href="https://github.com/aaronshawz" target="_blank">
-                    <img src="github.png" alt="GitHub">
-                </a>
-                <a href="https://x.com/CritzPKMN" target="_blank">
-                    <img src="x.png" alt="X">
-                </a>
-                <a href="https://www.instagram.com/aaron.zaw/" target="_blank">
-                    <img src="instagram.png" alt="Instagram">
-                </a>
-                <a href="https://www.linkedin.com/" target="_blank">
-                    <img src="linkedin.png" alt="LinkedIn">
-                </a>
-            </div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yo.</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .content {
+            margin-left: 20px;
+            padding: 20px;
+            flex-grow: 1;
+        }
+
+        #background-video {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            z-index: -1;
+            transform: translate(-50%, -50%);
+            background-size: cover;
+        }
+
+        .center-text {
+            text-align: center;
+        }
+
+        #mute-button {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+            color: white;
+            background-color: rgba(0, 0, 0, 0.5); /* Transparent background */
+            border: 2px solid white;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        #mute-button:hover {
+            background-color: rgba(255, 255, 255, 0.5);
+            color: black;
+        }
+
+        .social-buttons {
+            margin-top: 10px;
+        }
+
+        .social-buttons a {
+            display: inline-block;
+            margin: 0 10px;
+        }
+
+        .social-buttons img {
+            width: 40px; /* Adjust the size as needed */
+            height: 40px; /* Adjust the size as needed */
+            vertical-align: middle;
+            transition: transform 0.3s;
+        }
+
+        .social-buttons a:hover img {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+    <video loop id="background-video">
+        <source src="rickroll.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <div class="center-text">
+        <p style="font-size:48px; margin: 0; font-family: serif;">Aaron Zawislak</p>
+        <p style="font-size:16px; margin: 0;">professional dilly daller</p>
+        <button id="mute-button">Mute</button>
+        <div class="social-buttons">
+            <a href="https://github.com/aaronshawz" target="_blank">
+                <img src="github.png" alt="GitHub">
+            </a>
+            <a href="https://x.com/CritzPKMN" target="_blank">
+                <img src="x.png" alt="X">
+            </a>
+            <a href="https://www.instagram.com/aaron.zaw/" target="_blank">
+                <img src="instagram.png" alt="Instagram">
+            </a>
+            <a href="https://www.linkedin.com/" target="_blank">
+                <img src="linkedin.png" alt="LinkedIn">
+            </a>
         </div>
-        <script src="script.js"></script>
-    </body>
+    </div>
+    <script src="script.js"></script>
+</body>
 </html>
